@@ -1,3 +1,41 @@
-<p>
-  login works!
-</p>
+<mat-card fxFlex="40" style="margin-top: 50px">
+  <form [formGroup]="loginForm" novalidate>
+
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>use your email or username and password</mat-card-subtitle>
+    </mat-card-header>
+    <!--<img matCardImage src="Card wide image source">-->
+    <mat-card-content>
+      <div fxLayout="column" fxLayout.lt-md="column" fxLayoutGap="2em" fxFlexAlign="start">
+        <mat-form-field>
+          <input type="text"
+                 formControlName="UserName"
+                 placeholder="User Name"
+                 matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text"
+                 formControlName="Password"
+                 placeholder="User Name"
+                 matInput>
+        </mat-form-field>
+      </div>
+
+
+    </mat-card-content>
+    <mat-divider></mat-divider>
+
+    <mat-card-actions fxFlexAlign="center center">
+      <div style="text-align: center;" fxLayout="row" fxFlexAlign="center center">
+        <button [disabled]="!loginForm.valid"
+                mat-raised-button=""
+                color="primary"
+                (click)="onSubmit()">
+          <mat-icon class="mat-18">done</mat-icon>
+          Login
+        </button>
+      </div>
+    </mat-card-actions>
+  </form>
+</mat-card>

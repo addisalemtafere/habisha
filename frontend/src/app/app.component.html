@@ -7,7 +7,7 @@
         <h1>HABESHA MINGLE</h1>
         <span class="app-toolbar-spacer"></span>
 
-        <button mat-button>
+        <button mat-button (click)="router.navigateByUrl('/login')">
             <mat-icon>lock_open</mat-icon>
             <span>login</span>
         </button>
@@ -16,7 +16,7 @@
             <mat-icon matBadge="22" matBadgeColor="warn">notifications</mat-icon>
         </button>
 
-        <button mat-button>
+        <button mat-button (click)="router.navigateByUrl('/sing-up')">
             <mat-icon>person</mat-icon>
             <span>register</span>
         </button>
@@ -62,9 +62,9 @@
                 </mat-expansion-panel-header>
 
                 <mat-list dense class="mat-expansion-panel-body">
-                    <a mat-list-item routerLinkActive="active">
+                    <a mat-list-item routerLinkActive="active" routerLink="/profile">
                         <mat-icon color="primary" class="mat-18">account_circle</mat-icon>
-                        profile
+                        Profile
                     </a>
 
 
